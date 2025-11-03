@@ -1,0 +1,146 @@
+{
+  "info": {
+    "name": "DPP Jamon",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Coleccion de referencia para reproducir el flujo DPP Jamon."
+  },
+  "item": [
+    {
+      "name": "Pinata - pinJSONToIPFS",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{pinata_jwt}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pinataContent\": {\n    \"sample\": true\n  }\n}"
+        },
+        "url": {
+          "raw": "https://api.pinata.cloud/pinning/pinJSONToIPFS",
+          "protocol": "https",
+          "host": [
+            "api",
+            "pinata",
+            "cloud"
+          ],
+          "path": [
+            "pinning",
+            "pinJSONToIPFS"
+          ]
+        },
+        "description": "Ejecuta el pin de un JSON en Pinata usando PINATA_JWT. Sustituye el cuerpo por tu EPCIS."
+      }
+    },
+    {
+      "name": "CLI - npm run dpp:create",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "npm run dpp:create -- --gtin {{gtin}} --lot {{lot}} --serial {{serial}} --cid {{cid}}"
+        },
+        "url": {
+          "raw": "https://localhost.localdomain/cli/dpp-create",
+          "protocol": "https",
+          "host": [
+            "localhost",
+            "localdomain"
+          ],
+          "path": [
+            "cli",
+            "dpp-create"
+          ]
+        },
+        "description": "Comando CLI (no HTTP). Ejecuta este texto en tu terminal para crear la Dynamic."
+      }
+    },
+    {
+      "name": "CLI - npm run dpp:update",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "npm run dpp:update -- --gtin {{gtin}} --lot {{lot}} --serial {{serial}} --cid {{cid}}"
+        },
+        "url": {
+          "raw": "https://localhost.localdomain/cli/dpp-update",
+          "protocol": "https",
+          "host": [
+            "localhost",
+            "localdomain"
+          ],
+          "path": [
+            "cli",
+            "dpp-update"
+          ]
+        },
+        "description": "Comando CLI para empujar un nuevo estado Dynamic." 
+      }
+    },
+    {
+      "name": "CLI - npm run dpp:lock",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "npm run dpp:lock -- --gtin {{gtin}} --lot {{lot}} --serial {{serial}} --cid {{cid}}"
+        },
+        "url": {
+          "raw": "https://localhost.localdomain/cli/dpp-lock",
+          "protocol": "https",
+          "host": [
+            "localhost",
+            "localdomain"
+          ],
+          "path": [
+            "cli",
+            "dpp-lock"
+          ]
+        },
+        "description": "Comando CLI para crear la Locked notarization."
+      }
+    },
+    {
+      "name": "Resolver GS1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{resolver_base}}/resolver/01/{{gtin}}/10/{{lot}}/21/{{serial}}",
+          "host": [
+            "{{resolver_base}}"
+          ],
+          "path": [
+            "resolver",
+            "01",
+            "{{gtin}}",
+            "10",
+            "{{lot}}",
+            "21",
+            "{{serial}}"
+          ]
+        },
+        "description": "Consulta el resolver Express y devuelve Dynamic/Locked + manifest."
+      }
+    }
+  ],
+  "variable": [
+    { "key": "gtin", "value": "01234567890128" },
+    { "key": "lot", "value": "L-SECADERO-2025-10-31" },
+    { "key": "serial", "value": "123456" },
+    { "key": "cid", "value": "QmYvFqdt36xx2T5HnRtM4SXWv9NSVCGTQfnnzZeU2Qtyhd" },
+    { "key": "resolver_base", "value": "http://localhost:3000" },
+    { "key": "pinata_jwt", "value": "Bearer <token>" }
+  ]
+}

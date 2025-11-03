@@ -1,0 +1,41 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "ts": "tsx",
+    "sdk:test": "tsx src/test_sdk.ts",
+    "notarize:init": "tsx src/notarize_dynamic.ts",
+    "notarize:locked": "tsx src/notarize_locked.ts",
+    "notarize:update": "tsx src/notarize_update.ts",
+    "resolve:latest": "tsx src/resolve_latest.ts",
+    "notarize:dynamic": "tsx src/notarize_dynamic.ts",
+    "notar:create": "tsx scripts/notarization/create_dynamics.ts",
+    "notar:read":   "tsx scripts/notarization/read_latest.ts",
+    "notar:update": "tsx scripts/notarization/06_update_state.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@iota/iota-sdk": "^1.6.1",
+    "@iota/notarization": "^0.1.5",
+    "axios": "^1.13.1",
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

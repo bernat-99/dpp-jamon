@@ -1,0 +1,65 @@
+﻿{
+  "id": {
+    "dynamic": "0xf76468418465731df16549b4d76df0c80c9480b827dc1907ed38345507c81fbd",
+    "locked": "0x675bc6c2b69590d8cb7091b7d9db41604ec944da0e62d919c9480037650ca426"
+  },
+  "gs1": {
+    "gtin": "01234567890128",
+    "lot": "L-SECADERO-2025-10-31",
+    "serial": "123456"
+  },
+  "state": {
+    "latest_cid": "QmYvFqdt36xx2T5HnRtM4SXWv9NSVCGTQfnnzZeU2Qtyhd",
+    "seq": 3,
+    "version": 4,
+    "created_at": "+057805-12-04T04:00:39.000Z",
+    "last_state_change": "+057806-04-11T09:08:20.000Z"
+  },
+  "locked": {
+    "cid": "QmYvFqdt36xx2T5HnRtM4SXWv9NSVCGTQfnnzZeU2Qtyhd",
+    "created_at": "+057806-03-18T01:16:13.000Z"
+  },
+  "verified": true,
+  "notes": [],
+  "manifest": {
+    "fetched": true,
+    "data": {
+      "spec": "dpp-jamon/v1",
+      "scope": {
+        "piece_id": "ITACA-0001-2025",
+        "gtin": "08412345000012",
+        "lot_id": "CURADO-2025Q1"
+      },
+      "seq": 1,
+      "prev": null,
+      "timestamp": "2025-10-30T12:34:56Z",
+      "actors": {
+        "operator_did": "did:iota:placeholder",
+        "role": "secadero"
+      },
+      "events": [
+        {
+          "type": "TransformationEvent",
+          "summary": "Entrada a sala curado #3",
+          "epcisRef": "inline"
+        }
+      ],
+      "snapshots": {
+        "ambient_daily": {
+          "gln": "8437000123456",
+          "lot_id": "CURADO-2025Q1",
+          "day": "2025-10-29",
+          "t_avg": 18.6,
+          "h_avg": 72.1,
+          "co2_avg": 640
+        }
+      },
+      "attachments": [],
+      "integrity": {
+        "sha256": "",
+        "epcis_count": 1,
+        "attachments_count": 0
+      }
+    }
+  }
+}

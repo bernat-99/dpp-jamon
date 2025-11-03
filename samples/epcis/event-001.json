@@ -1,0 +1,20 @@
+﻿{
+  "@context": [
+    "https://ref.gs1.org/epcis"
+  ],
+  "type": "ObjectEvent",
+  "action": "OBSERVE",
+  "bizStep": "urn:epcglobal:cbv:bizstep:commissioning",
+  "disposition": "urn:epcglobal:cbv:disp:in_progress",
+  "eventTime": "2025-10-30T12:34:56Z",
+  "eventTimeZoneOffset": "+00:00",
+  "readPoint": {
+    "id": "urn:epc:id:sgln:8437000123456.0000"
+  },
+  "epcList": [
+    "urn:epc:id:sgtin:8437001.000001.123456"
+  ],
+  "ilmd": {
+    "https://gs1.org/voc/batchNumber": "L-SECADERO-2025-10-31"
+  }
+}

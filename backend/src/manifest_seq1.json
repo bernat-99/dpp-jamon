@@ -1,0 +1,37 @@
+{
+  "spec": "dpp-jamon/v1",
+  "scope": {
+    "piece_id": "ITACA-0001-2025",
+    "gtin": "08412345000012",
+    "lot_id": "CURADO-2025Q1"
+  },
+  "seq": 1,
+  "prev": null,
+  "timestamp": "2025-10-30T12:34:56Z",
+  "actors": {
+    "operator_did": "did:iota:placeholder",
+    "role": "secadero"
+  },
+  "events": [
+    {
+      "type": "TransformationEvent",
+      "summary": "Entrada a sala curado #3",
+      "epcisRef": "inline"
+    }
+  ],
+  "snapshots": {
+    "ambient_daily": {
+      "gln":"8437000123456",
+      "lot_id":"CURADO-2025Q1",
+      "day":"2025-10-29",
+      "t_avg":18.6,"h_avg":72.1,
+      "co2_avg":640
+    }
+  },
+  "attachments": [],
+  "integrity": {
+  "sha256": "",
+  "epcis_count": 1,
+  "attachments_count": 0
+}
+}

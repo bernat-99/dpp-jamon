@@ -1,0 +1,26 @@
+﻿# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build outputs
+frontend/dist/
+backend/dist/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+backend/.env
+frontend/.env
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Archives
+*.tgz

@@ -1,0 +1,36 @@
+{
+    "name":  "dpp-jamon",
+    "private":  true,
+    "type":  "module",
+    "scripts":  {
+                    "dev:backend":  "tsx backend/src/server.ts",
+                    "dev:frontend":  "npm run dev --prefix frontend",
+                    "build:frontend":  "npm run build --prefix frontend",
+                    "serve":  "tsx backend/src/server.ts",
+                    "epcis:gen":  "tsx scripts/epcis/gen-epcis.ts",
+                    "ipfs:pin":  "tsx scripts/ipfs/pin-to-pinata.ts",
+                    "dpp:create":  "tsx scripts/notarization/create_dynamic.ts",
+                    "dpp:update":  "tsx scripts/notarization/update_state.ts",
+                    "dpp:lock":  "tsx scripts/notarization/create_locked.ts",
+                    "bench":  "tsx scripts/bench/bench.ts",
+                    "qr:generate":  "tsx tools/generate-qr.ts"
+                },
+    "dependencies":  {
+                         "@iota/iota-sdk":  "^1.6.1",
+                         "@iota/notarization":  "^0.1.5",
+                         "axios":  "^1.13.1",
+                         "dotenv":  "^17.2.3",
+                         "express":  "^4.21.2",
+                         "pg":  "^8.16.3",
+                         "cors":  "^2.8.5"
+                     },
+    "devDependencies":  {
+                            "@types/express":  "^4.17.25",
+                            "@types/node":  "^24.9.2",
+                            "@types/pg":  "^8.15.6",
+                            "qrcode":  "^1.5.3",
+                            "ts-node":  "^10.9.2",
+                            "tsx":  "^4.20.6",
+                            "typescript":  "^5.9.3"
+                        }
+}
